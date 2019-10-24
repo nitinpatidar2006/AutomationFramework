@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unittest Results</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="text-capitalize">Unittest Results</h2>
+                <p class='attribute'><strong>Start Time: </strong>2019-10-24 11:57:44</p>
+                <p class='attribute'><strong>Duration: </strong>14.14 s</p>
+                <p class='attribute'><strong>Summary: </strong>Total: 3, Pass: 0, Error: 3</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-md-10">
+                <table class='table table-hover table-responsive'>
+                    <thead>
+                        <tr>
+                            <th>__main__.LoginTest</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_login_invalid</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">AttributeError: type object 'Locators' has no attribute 'Invalid_error_message'</p><p style="color:maroon;">Traceback (most recent call last):
+  File "D:\Learning_again\PythonAutomationFrameworkRTB\Tests\LoginTest.py", line 47, in test_login_invalid
+    message = login.verify_invalid_username_message()
+  File "D:\Learning_again\PythonAutomationFrameworkRTB\Pages\Login.py", line 26, in verify_invalid_username_message
+    msg = self.driver.find_element_by_xpath(Locators.Invalid_error_message).text
+AttributeError: type object 'Locators' has no attribute 'Invalid_error_message'
+</p>
+                            </td>
+                        </tr>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_login_valid</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine</p><p style="color:maroon;">Traceback (most recent call last):
+  File "D:\Learning_again\PythonAutomationFrameworkRTB\Tests\LoginTest.py", line 28, in test_login_valid
+    driver.get("https://opensource-demo.orangehrmlive.com/")
+  File "C:\Users\nitin.patidar\AppData\Local\Programs\Python\Python37-32\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 245, in get
+    self.execute(Command.GET, {'url': url})
+  File "C:\Users\nitin.patidar\AppData\Local\Programs\Python\Python37-32\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 231, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "C:\Users\nitin.patidar\AppData\Local\Programs\Python\Python37-32\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 395, in execute
+    return self._request(command_info[0], url, body=data)
+  File "C:\Users\nitin.patidar\AppData\Local\Programs\Python\Python37-32\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 425, in _request
+    self._conn.request(method, parsed_url.path, body, headers)
+  File "C:\Users\nitin.patidar\AppData\Local\Programs\Python\Python37-32\lib\http\client.py", line 1229, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\nitin.patidar\AppData\Local\Programs\Python\Python37-32\lib\http\client.py", line 1275, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\nitin.patidar\AppData\Local\Programs\Python\Python37-32\lib\http\client.py", line 1224, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\nitin.patidar\AppData\Local\Programs\Python\Python37-32\lib\http\client.py", line 1055, in _send_output
+    self.send(chunk)
+  File "C:\Users\nitin.patidar\AppData\Local\Programs\Python\Python37-32\lib\http\client.py", line 977, in send
+    self.sock.sendall(data)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+</p>
+                            </td>
+                        </tr>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_login_valid</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it</p><p style="color:maroon;">Traceback (most recent call last):
+  File "D:\Learning_again\PythonAutomationFrameworkRTB\Tests\LoginTest.py", line 54, in tearDown
+    self.driver.close()
+  File "C:\Users\nitin.patidar\AppData\Local\Programs\Python\Python37-32\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 505, in close
+    self.execute(Command.CLOSE)
+  File "C:\Users\nitin.patidar\AppData\Local\Programs\Python\Python37-32\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 231, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "C:\Users\nitin.patidar\AppData\Local\Programs\Python\Python37-32\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 395, in execute
+    return self._request(command_info[0], url, body=data)
+  File "C:\Users\nitin.patidar\AppData\Local\Programs\Python\Python37-32\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 425, in _request
+    self._conn.request(method, parsed_url.path, body, headers)
+  File "C:\Users\nitin.patidar\AppData\Local\Programs\Python\Python37-32\lib\http\client.py", line 1229, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\nitin.patidar\AppData\Local\Programs\Python\Python37-32\lib\http\client.py", line 1275, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\nitin.patidar\AppData\Local\Programs\Python\Python37-32\lib\http\client.py", line 1224, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\nitin.patidar\AppData\Local\Programs\Python\Python37-32\lib\http\client.py", line 1016, in _send_output
+    self.send(msg)
+  File "C:\Users\nitin.patidar\AppData\Local\Programs\Python\Python37-32\lib\http\client.py", line 956, in send
+    self.connect()
+  File "C:\Users\nitin.patidar\AppData\Local\Programs\Python\Python37-32\lib\http\client.py", line 928, in connect
+    (self.host,self.port), self.timeout, self.source_address)
+  File "C:\Users\nitin.patidar\AppData\Local\Programs\Python\Python37-32\lib\socket.py", line 727, in create_connection
+    raise err
+  File "C:\Users\nitin.patidar\AppData\Local\Programs\Python\Python37-32\lib\socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                Total: 3, Pass: 0, Error: 3 -- Duration: 14.14 s
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('td').on('click', '.btn', function(e){
+                e.preventDefault();
+                e.stopImmediatePropagation();
+                var $this = $(this);
+                var $nextRow = $this.closest('tr').next('tr');
+                $nextRow.slideToggle("fast");
+                $this.text(function(i, text){
+                    if (text === 'View') {
+                        return 'Hide';
+                    } else {
+                        return 'View';
+                    };
+                });
+            });
+        });
+    </script>
+</body>
+</html
